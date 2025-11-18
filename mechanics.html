@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Magic Roleplay — Механики и Функции</title>
+<style>
+  :root{
+    --bg:#0f1115;
+    --panel:#141821;
+    --muted:#8b96a7;
+    --text:#e8ecf2;
+    --accent:#6aa5ff;
+    --accent-2:#9b6bff;
+    --border:rgba(255,255,255,0.08);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:linear-gradient(180deg,#0c0e13 0%, #0f1115 40%, #0f1115 100%);
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 20px;
+  }
+
+  header{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:40px;
+  }
+
+  .logo{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:radial-gradient(circle at 20% 20%, var(--accent), var(--accent-2), #3a3f50);
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    font-size:28px;
+    color:#0f1115;
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+    border:2px solid var(--border);
+    cursor:pointer;
+    text-decoration:none;
+  }
+
+  h1{
+    font-size:32px;
+    font-weight:800;
+  }
+
+  .card{
+    width:100%;
+    max-width:1100px;
+    background:linear-gradient(180deg, rgba(22,26,36,.92), rgba(20,24,33,.88));
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    margin-bottom:35px;
+  }
+
+  .card h2{
+    font-size:26px;
+    margin-bottom:15px;
+    color:var(--accent);
+  }
+
+  .mechanic-block{
+    margin-top:20px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:14px;
+  }
+
+  .mechanic-block h3{
+    font-size:20px;
+    margin-bottom:8px;
+  }
+
+  .mechanic-block p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.5;
+  }
+
+  .img-holder{
+    width:100%;
+    height:100%;
+    margin:12px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border-radius:14px;
+    border:1px solid var(--border);
+    margin-top:12px;
+    background:rgba(0,0,0,0.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:14px;
+    font-style:italic;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">MR</a>
+  <h1>Механики и Функции Magic Roleplay</h1>
+</header>
+
+<div class="card">
+  <h2>Раздел 1 — Основные игровые механики</h2>
+
+    <div class="mechanic-block">
+        <h3>Выбор персонажа</h3>
+        <p>
+            При первом заходе на сервер вам необходимо создать и выбрать персонажа, с которым вы будете играть. Вы также можете покупать изменить свою причёску и одежду за игровую валюту.
+        </p>
+        <div class="img-holder"><img src="Mechanics/CharacterChosing.gif" width="100%" height="100%"></div>
+    </div>
+  <div class="mechanic-block">
+    <h3>Меню взаимодействия</h3>
+    <p>
+        Данное меню открывается по нажатию клавиши G на клавиатуре, с помощью него вы можете взаимодействовать с игроками и транспортными средствами.
+    </p>
+    <div class="img-holder"><img src="Mechanics//PlayerMenu.gif" width="100%" height="100%"></div>
+    <div class="img-holder"><img src="Mechanics/PlayerMenuCar.gif" width="100%" height="100%"> </div>
+  </div>
+
+  <div>
+    <h3>Гардероб</h3>
+    <p>
+    В нашем проекте реализована система гардероба, которая позволяет игрокам покупать и одевать различные предметы одежды и аксессуары для своих персонажей. Система включает в себя широкий выбор одежды и сохранение одетой одежды между сессий. Также в системе присутствует система масок которая позволяет игрокам скрывать свою личность во время криминальных действий.
+    </p>
+    <div class="img-holder"><img src="Mechanics/ClothesSystem.gif" width="100%" height="100%"></div>
+  </div>
+</div>
+
+<div class="card">
+
+    <h2>Системы для фракций</h2>
+
+       <div class="mechanic-block">
+    <h3>Система арестов</h3>
+    <p>
+    В нашем проекте реализована продвинутая система арестов, которая позволяет сотрудникам правоохранительных органов задерживать и арестовывать нарушителей закона. Система включает в себя надевание наручников, транспортировку задержанных в полицейские участки и оформление протоколов ареста.
+    </p>
+    <div class="img-holder"><img src="Mechanics//Arestsystem.gif" width="100%" height="100%"></div>
+    <div class="img-holder"><img src="Mechanics/ArestsystemCar.gif" width="100%" height="100%"> </div>
+  </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Криминальные системы</h2>
+
+       <div class="mechanic-block">
+    <h3>Система ограблений(BETA)</h3>
+    <p>
+    В нашем проекте реализована система ограблений, которая позволяет игрокам участвовать в различных криминальных активностях, таких как ограбления квартир, магазинов и банков. Система включает в себя покупку необходимого оборудования, взлом замков или ограбление других игроков.
+        
+    </p>
+    <div class="img-holder"><img src="Mechanics/RobbingSystem.gif" width="100%" height="100%"></div>
+  </div>
+
+</div>
+
+<div class="card">
+    <h2>Comat системы</h2>
+
+         <div class="mechanic-block">
+        <h3>Система оружия(BETA)</h3>
+        <p>
+        В нашем проекте реализована продвинутая система оружия, которая позволяет игрокам использовать различные виды оружия с уникальными характеристиками и механиками. Система включает в себя hitmarker и визуальные эффекты, отдачу, combat log и систему лечения тяжело раненых.
+        </p>
+        <div class="img-holder"><img src="Mechanics/WeaponSystem.gif" width="100%" height="100%"></div>
+</div>
+
+</body>
+</html>
